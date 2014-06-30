@@ -17,4 +17,7 @@ var app = new EmberApp();
 // please specify an object with the list of modules as keys
 // along with the exports of each module as its value.
 
+app.import('vendor/hammerjs/hammer.js');
+app.import('vendor/ember-hammer/ember-hammer.js');
+
 module.exports = app.toTree();
