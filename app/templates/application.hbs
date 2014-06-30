@@ -1,3 +1,23 @@
 <h2 id='title'>Welcome to Ember.js</h2>
 
+{{!-- <div class="list-group"> --}}
+  {{#each cell in model}}
+
+    {{#asr-draggable-tvc}}
+      {{#asr-draggable-tvc-left}}
+        Left
+      {{/asr-draggable-tvc-left}}
+      {{#asr-draggable-tvc-main}}
+        <div class='custom-cell-inner'>
+          {{cell.content}}
+        </div>
+      {{/asr-draggable-tvc-main}}
+      {{#asr-draggable-tvc-right}}
+        Right
+      {{/asr-draggable-tvc-right}}
+    {{/asr-draggable-tvc}}
+
+  {{/each}}
+{{!-- </div> --}}
+
 {{outlet}}

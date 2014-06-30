@@ -1,5 +1,35 @@
 @import 'vendor/bootstrap-sass-official/assets/stylesheets/bootstrap';
 
-html, body {
-  margin: 20px;
+asr-draggable-tvc {
+  background: gray;
+  display: block;
+  overflow: hidden;
+
+  .asr-draggable-tvc-wrapper.animate {
+    transition: all .3s;
+  }
+
+  asr-draggable-tvc-left, asr-draggable-tvc-main, asr-draggable-tvc-right {
+    float: left;
+    margin: 0;
+    overflow: hidden;
+  }
+
+  asr-draggable-tvc-left {
+    background: green;
+    text-align: right;
+  }
+
+  asr-draggable-tvc-main {
+    background: white;
+  }
+
+  asr-draggable-tvc-right {
+    background: red;
+  }
+}
+
+.custom-cell-inner {
+  padding: 15px;
+  box-shadow: inset 0px 1px 0px 0px rgba(50, 50, 50, 0.1);
 }
