@@ -3,7 +3,7 @@
 <div style="overflow: hidden;">
   {{#each cell in model}}
 
-    {{#asr-draggable-tvc}}
+    {{#asr-draggable-tvc onMaxLeft='delete' model=cell}}
 
       {{#asr-draggable-tvc-max-left}}
         Max Left

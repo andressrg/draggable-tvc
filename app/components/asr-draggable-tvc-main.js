@@ -1,7 +1,11 @@
-import Ember from "ember";
+import AsrDraggableTvcBase from "draggable-tvc/components/asr-draggable-tvc-base";
 
-export default Ember.Component.extend({
+export default AsrDraggableTvcBase.extend({
 
   tagName: 'asr-draggable-tvc-main',
+
+  registerWithParent: function() {
+    this.get('parentView').registerMainCell(this);
+  }.on('didInsertElement'),
 
 });
