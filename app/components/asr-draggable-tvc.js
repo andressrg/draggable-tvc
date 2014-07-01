@@ -30,12 +30,12 @@ export default Ember.Component.extend({
     this.set('maxRightCell', maxRightCell);
   },
 
-  initializeWrapperWidth: function() {
+  initializeBaseWidth: function() {
     var initialWidth = this.$().width();
     this.set('baseWidth', initialWidth);
   }.on('didInsertElement'),
 
-  updateWidth: function() {
+  updateWidthAndHeight: function() {
     var baseWidth = this.get('baseWidth');
     var totalWidth = 0;
 
@@ -44,6 +44,7 @@ export default Ember.Component.extend({
     if (this.get('rightCell')) { totalWidth += baseWidth; }
 
     this.$().width(totalWidth);
+    this.set('baseHeight', this.$().height());
     this.updateCellOffset();
   }.observes('baseWidth', 'mainCell', 'leftCell', 'rightCell', 'maxLeftCell', 'maxRightCell'),
 

@@ -9,7 +9,13 @@ export default Ember.Component.extend({
   }.on('didInsertElement'),
 
   updateWidth: function() {
-    this.$().width(this.get('parentView.baseWidth'));
+    var $this = this.$();
+    $this.width(this.get('parentView.baseWidth'));
   }.observes('parentView.baseWidth').on('didInsertElement'),
+
+  updateHeight: function() {
+    var $this = this.$();
+    $this.height(this.get('parentView.baseHeight'));
+  }.observes('parentView.baseHeight').on('didInsertElement'),
 
 });
