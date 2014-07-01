@@ -116,16 +116,16 @@ export default Ember.Component.extend({
 
       switch (this.get('currentDragState')) {
         case 1:
-          console.log('Right! ' + this.get('model.content'));
+          this.sendAction('onRight', this.get('model'));
           break;
         case 2:
-          console.log('Max right! ' + this.get('model.content'));
+          this.sendAction('onMaxRight', this.get('model'));
           break;
         case -1:
-          console.log('Left! ' + this.get('model.content'));
+          this.sendAction('onLeft', this.get('model'));
           break;
         case -2:
-          console.log('Max left! ' + this.get('model.content'));
+          this.sendAction('onMaxLeft', this.get('model'));
           break;
         default:
           break;

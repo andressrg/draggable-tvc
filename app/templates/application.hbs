@@ -3,30 +3,29 @@
 <div style="overflow: hidden;">
   {{#each cell in model}}
 
-    {{#asr-draggable-tvc onMaxLeft='delete' model=cell}}
-
+    {{#asr-draggable-tvc 
+        model=cell
+        onMaxLeft='delete'
+        onLeft='archive'
+        onRight='pospone'
+        onMaxRight='addToList'}}
       {{#asr-draggable-tvc-max-left}}
         Max Left
       {{/asr-draggable-tvc-max-left}}
-
       {{#asr-draggable-tvc-left}}
         Left
       {{/asr-draggable-tvc-left}}
-
       {{#asr-draggable-tvc-main}}
         <div class='custom-cell-inner'>
           {{cell.content}}
         </div>
       {{/asr-draggable-tvc-main}}
-
       {{#asr-draggable-tvc-right}}
         Right
       {{/asr-draggable-tvc-right}}
-
       {{#asr-draggable-tvc-max-right}}
         Max Right
       {{/asr-draggable-tvc-max-right}}
-
     {{/asr-draggable-tvc}}
 
   {{/each}}
