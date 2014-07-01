@@ -9,10 +9,13 @@ asr-draggable-tvc {
     transition: all .3s;
   }
 
-  asr-draggable-tvc-left, asr-draggable-tvc-main, asr-draggable-tvc-right {
+  asr-draggable-tvc-max-left, asr-draggable-tvc-left, asr-draggable-tvc-main, asr-draggable-tvc-right, asr-draggable-tvc-max-right {
     float: left;
-    margin: 0;
     overflow: hidden;
+  }
+
+  asr-draggable-tvc-max-left {
+    text-align: right;
   }
 
   asr-draggable-tvc-left {

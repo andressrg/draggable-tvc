@@ -3,81 +3,13 @@ import Ember from "ember";
 export default Ember.Route.extend({
 
   model: function() {
-    return [
-      {
-        content: 'Cell one'
-      },
-      {
-        content: 'Cell two'
-      },
-      {
-        content: 'Cell three'
-      },
-      {
-        content: 'Cell four'
-      },
-
-      {
-        content: 'Cell four'
-      },
-      {
-        content: 'Cell four'
-      },
-      {
-        content: 'Cell four'
-      },
-      {
-        content: 'Cell four'
-      },
-      {
-        content: 'Cell four'
-      },
-      {
-        content: 'Cell four'
-      },
-      {
-        content: 'Cell four'
-      },
-      {
-        content: 'Cell four'
-      },
-      {
-        content: 'Cell four'
-      },
-      {
-        content: 'Cell four'
-      },
-      {
-        content: 'Cell four'
-      },
-      {
-        content: 'Cell four'
-      },
-      {
-        content: 'Cell four'
-      },
-      {
-        content: 'Cell four'
-      },
-      {
-        content: 'Cell four'
-      },
-      {
-        content: 'Cell four'
-      },
-      {
-        content: 'Cell four'
-      },
-      {
-        content: 'Cell four'
-      },
-      {
-        content: 'Cell four'
-      },
-      {
-        content: 'Cell four'
-      },
-    ];
+    var items = [];
+    for (var i = 0; i < 100; i++) {
+      items.push({
+        content: "Cell " + i
+      });
+    }
+    return items;
   },
 
 });
